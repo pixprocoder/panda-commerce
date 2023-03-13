@@ -21,14 +21,14 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="assets/images/logo.png" alt="" />
           </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            data-bs-target="/navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -38,13 +38,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Shoes</a>
+                <a class="nav-link" href="/">Shoes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Backpack</a>
+                <a class="nav-link" href="/">Backpack</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Subscribe</a>
@@ -132,7 +132,7 @@
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleRide"
+            data-bs-target="/carouselExampleRide"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -141,7 +141,7 @@
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleRide"
+            data-bs-target="/carouselExampleRide"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -160,7 +160,7 @@
             <!-- single category -->
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div
-                class="p-3 border bg-warning rounded-3 d-flex align-items-center justify-content-around"
+                class="category-card p-3 border bg-warning rounded-3 d-flex align-items-center justify-content-around"
               >
                 <h1 class="text-white">Watch</h1>
                 <img src="assets/images/categories/watch.png" alt="" />
@@ -169,7 +169,7 @@
             <!-- single category -->
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div
-                class="p-3 border bg-success rounded-3 d-flex align-items-center justify-content-around"
+                class="category-card p-3 border bg-success rounded-3 d-flex align-items-center justify-content-around"
               >
                 <h1 class="text-white">Bag</h1>
                 <img src="assets/images/categories/bag.png" alt="" />
@@ -178,7 +178,7 @@
             <!-- single category -->
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div
-                class="p-3 border bg-primary rounded-3 d-flex align-items-center justify-content-around"
+                class="category-card p-3 border bg-primary rounded-3 d-flex align-items-center justify-content-around"
               >
                 <h1 class="text-white">Shoes</h1>
                 <img src="assets/images/categories/shoes.png" alt="" />
@@ -193,7 +193,7 @@
         <h2>Shoes</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/shoes/shoe-1.png"
                 class="card-img-top"
@@ -214,7 +214,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/shoes/shoe-2.png"
                 class="card-img-top"
@@ -234,7 +234,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/shoes/shoe-3.png"
                 class="card-img-top"
@@ -262,7 +262,7 @@
         <h2>Backpack</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/bags/bag-1.png"
                 class="card-img-top"
@@ -283,7 +283,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/bags/bag-2.png"
                 class="card-img-top"
@@ -303,7 +303,7 @@
             </div>
           </div>
           <div class="col">
-            <div class="card border border-0 shadow-lg h-100">
+            <div class="card bag-card border border-0 shadow-lg h-100">
               <img
                 src="assets/images/bags/bag-3.png"
                 class="card-img-top"
@@ -340,11 +340,19 @@
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="footer-email-input"
                 aria-describedby="emailHelp"
+                placeholder="Type email"
               />
             </div>
-            <button type="submit" class="btn panda-btn-buy-now">Submit</button>
+            <button
+              type="submit"
+              id="submit-btn"
+              disabled
+              class="btn panda-btn-buy-now"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </section>
@@ -363,5 +371,8 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JS link  -->
+    <script src="JS/script.js"></script>
   </body>
 </html>
